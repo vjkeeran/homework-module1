@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>Activities | Great Cliffs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body id="activities">
 
   <div class="container">
 
     <header>
-      <img src="images/banner.jpg" alt="Cliff Adventure Banner" width="100%" height="auto">
+      <!-- Removed cliff ocean img as per instruction -->
       <div class="main-header">
         <div class="logo">
           <img src="images/logo.png" alt="Great Cliff's Logo" width="120">
@@ -17,7 +19,7 @@
         <nav class="main-menu">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="activities.html">Activities</a></li>
+            <li><a href="activities.html" class="active">Activities</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -25,26 +27,47 @@
     </header>
 
     <main>
-      <h1>Activities</h1>
-      <p>Explore a range of exciting adventures including hiking, kayaking, skydiving, biking, and camping. Choose your thrill and discover unforgettable views at every turn.</p>
-
-      <table border="1">
-        <caption>Activities at the Cliffs</caption>
+      <h2>Adventure Activities at Great Cliffs</h2>
+      <table>
+        <caption>Activities Available</caption>
         <thead>
           <tr>
             <th>Activity</th>
-            <th>Location</th>
-            <th>Difficulty</th>
+            <th>Start Time</th>
             <th>Duration</th>
-            <th>Price</th>
+            <th>Max Guests</th>
+            <th>Cost</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Hiking</td><td>North Ridge</td><td>Easy</td><td>3 hours</td><td>$20</td></tr>
-          <tr><td>Kayak</td><td>River Bend</td><td>Medium</td><td>2 hours</td><td>$30</td></tr>
-          <tr><td>Skydiving</td><td>Sky Point</td><td>Hard</td><td>1 hour</td><td>$100</td></tr>
-          <tr><td>Biking</td><td>Cliff Trail</td><td>Medium</td><td>2.5 hours</td><td>$25</td></tr>
-          <tr><td>Camping</td><td>Base Camp</td><td>Easy</td><td>Overnight</td><td>$15</td></tr>
+          <tr>
+            <td>Base Jumping</td>
+            <td>8:00 AM</td>
+            <td>4 hrs</td>
+            <td>8</td>
+            <td>$250</td>
+          </tr>
+          <tr>
+            <td>Rock Climbing</td>
+            <td>10:00 AM</td>
+            <td>3 hrs</td>
+            <td>12</td>
+            <td>$150</td>
+          </tr>
+          <tr>
+            <td>Zipline</td>
+            <td>1:00 PM</td>
+            <td>2 hrs</td>
+            <td>15</td>
+            <td>$75</td>
+          </tr>
+          <tr>
+            <td>Bungee Jumping</td>
+            <td>3:30 PM</td>
+            <td>1 hr</td>
+            <td>6</td>
+            <td>$125</td>
+          </tr>
         </tbody>
       </table>
     </main>
@@ -54,8 +77,11 @@
         <div class="copy">
           &copy; Great Cliffs Inc.
         </div>
+        
         <div class="social">
-          <h3>Follow us on social media!</h3>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
         </div>
       </div>
       <div id="disclaimer">
