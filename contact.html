@@ -46,6 +46,22 @@
           <textarea></textarea>
         </div>
 
+        <label for="howContact">How should we contact you?</label><br>
+        <select id="howContact" name="howContact">
+          <option id="selectOne" value="">Select One</option>
+          <option id="optionEmail" value="email">Email</option>
+          <option id="optionPhone" value="phone">Phone</option>
+        </select><br><br>
+
+        <div id="emailDiv" style="display: none;">
+          <label for="enterEmail">Enter your email</label><br>
+          <input type="email" id="enterEmail" name="enterEmail"><br><br>
+        </div>
+
+        <div id="phoneDiv" style="display: none;">
+          <label for="enterPhone">Enter your phone</label><br>
+          <input type="tel" id="enterPhone" name="enterPhone"><br><br>
+        </div>
         <div class="randomcode">
           <input type="text" id="codeentered" name="randomcode" placeholder="Enter characters">
           <p id="codes"></p>
