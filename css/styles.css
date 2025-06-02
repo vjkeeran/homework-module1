@@ -1,8 +1,10 @@
 /* styles.css */
 
 /* Header Background for index */
+
+
 body#home header {
-  background-image: url("images/cliff_ocean.jpg");
+  background-image: url("../images/cliff_ocean.jpg");
   background-size: cover;
   background-position: center;
   height: 564px;
@@ -11,7 +13,7 @@ body#home header {
 
 /* Header Background for activities */
 body#activities header {
-  background-image: url("images/cliff_rock.jpg");
+  background-image: url("../images/cliff_rock.jpg");
   background-size: cover;
   background-position: center;
   height: 564px;
@@ -20,7 +22,7 @@ body#activities header {
 
 /* Header Background for contact */
 body#contact header {
-  background-image: url("images/runfly.jpg");
+  background-image: url("../images/runfly.jpg");
   background-size: cover;
   background-position: center;
   height: 564px;
