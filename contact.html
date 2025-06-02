@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Contact | Great Cliffs</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body id="contact">
 
@@ -41,8 +41,20 @@
         <label for="message">Message *</label><br>
         <textarea id="message" name="message" rows="5" required></textarea><br>
 
-        <input type="submit" value="Submit">
-      </form>
+        <div class="commentbox">
+          <label>How did you hear about us:</label>
+          <textarea></textarea>
+        </div>
+
+        <div class="randomcode">
+          <input type="text" name="randomcode" placeholder="Enter characters">
+          <p id="codes"></p>
+        </div>
+
+        <div class="button">
+          <input type="submit" id="submit" value="Inquire">
+        </div>
+        </form>
 
     </main>
 
@@ -63,7 +75,8 @@
       </div>
     </footer>
 
-  </div>
+    <script src="js/site_scripts.js"></script>
+    <script src="js/randomcodes.js"></script>
 
 </body>
 </html>
