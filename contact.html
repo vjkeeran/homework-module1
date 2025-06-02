@@ -5,7 +5,7 @@
   <title>Contact | Great Cliffs</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body id="contact">
+<body id="contact" onLoad="disableButton(true)">
 
   <div class="container">
 
@@ -47,14 +47,15 @@
         </div>
 
         <div class="randomcode">
-          <input type="text" name="randomcode" placeholder="Enter characters">
+          <input type="text" id="codeentered" name="randomcode" placeholder="Enter characters">
           <p id="codes"></p>
         </div>
 
         <div class="button">
           <input type="submit" id="submit" value="Inquire">
         </div>
-        </form>
+
+      </form>
 
     </main>
 
@@ -75,8 +76,10 @@
       </div>
     </footer>
 
-    <script src="js/site_scripts.js"></script>
-    <script src="js/randomcodes.js"></script>
+  </div>
+
+  <script src="js/site_scripts.js"></script>
+  <script src="js/randomcodes.js"></script>
 
 </body>
 </html>
