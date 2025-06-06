@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Cliffs | Great Cliffs</title>
+  <meta charset="utf-8">
+  <title>California's Greatest Cliffs</title>
+
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body id="cliffs">
 
@@ -12,59 +15,101 @@
     <header>
       <div class="main-header">
         <div class="logo">
-          <img src="images/logo.png" alt="Great Cliffs Logo" width="120">
+          <img src="images/logo.png" alt="Great Cliff's Logo" width="120">
         </div>
         <nav class="main-menu">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="cliffs.html">Cliffs</a></li>
             <li><a href="activities.html">Activities</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="cliffs.html" class="active">Cliffs</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <h2>Explore the Great Cliffs</h2>
-      <section class="cliff-text">
+      <section class="intro">
+        <h2>California's Greatest Cliffs</h2>
         <p>
-          The Great Cliffs offer some of the most stunning views in the world. Whether you're standing at the edge looking out over the valley or exploring the rock formations, there's something for everyone to enjoy. Hiking trails, photo opportunities, and thrilling heights make the cliffs an unforgettable adventure.
+          The greatest cliffs are these four cliffs located in southern California. Each of these cliffs have their own uniqueness and beauty: West Cliff, North Cliff, East Cliff and South Cliff are the pride of California. Each cliff has many attractions to offer visitors such as recreational caves, camping sites, wildlife watch spots and overnight cabins.
         </p>
         <p>
-          Known for their majestic beauty and diverse wildlife, the Great Cliffs are a sanctuary for nature lovers and thrill seekers alike. Make sure to bring your camera and plenty of water—this is one experience you won’t want to forget.
+          No matter which direction you head from Irvine, California, the sites are easily reached within a 100 mile radius. West Cliff is the most popular among Westcliff University campus students because of its close proximity.
         </p>
       </section>
 
-      <section class="gallery">
-        <h3>Photo Gallery</h3>
-        <div class="gallery-grid">
-          <img src="images/cliff-east-river.jpg" alt="Cliff View 1">
-          <img src="images/cliff-north-mountain.jpg" alt="Cliff View 2">
-          <img src="images/cliff-south-canyon.jpg" alt="Cliff View 3">
-          <img src="images/cliff-west-sea.jpg" alt="Cliff View 4">
-          <img src="images/forest_cliff.jpgs" alt="Cliff View 5">
+      <section class="cliff-grid">
+        <div class="cliff-item">
+          <a href="#/" class="lightbox-toggle">
+            <img src="images/cliff-west-sea.jpg" alt="West Cliff">
+          </a>
+          <h3>West Cliff</h3>
+        </div>
+        <div class="cliff-item">
+          <a href="#/" class="lightbox-toggle">
+            <img src="images/cliff-north-mountain.jpg" alt="North Cliff">
+          </a>
+          <h3>North Cliff</h3>
+        </div>
+        <div class="cliff-item">
+          <a href="#/" class="lightbox-toggle">
+            <img src="images/cliff-east-river.jpg" alt="East Cliff">
+          </a>
+          <h3>East Cliff</h3>
+        </div>
+        <div class="cliff-item">
+          <a href="#/" class="lightbox-toggle">
+            <img src="images/cliff-south-canyon.jpg" alt="South Cliff">
+          </a>
+          <h3>South Cliff</h3>
         </div>
       </section>
     </main>
 
+    <!-- Partners section -->
     <footer>
+      <section>
+        <ul id="partners">
+          <li class="partner"><img src="images/partners/partner-bustour.png" alt="Partner 1"></li>
+          <li class="partner"><img src="images/partners/partner-cabinrental.png" alt="Partner 2"></li>
+          <li class="partner"><img src="images/partners/partner-campingadv.png" alt="Partner 3"></li>
+          <li class="partner"><img src="images/partners/partner-collegetours.png" alt="Partner 4"></li>
+          <li class="partner"><img src="images/partners/partner-rentalbike.png" alt="Partner 5"></li>
+          <li class="partner"><img src="images/partners/partner-tourgroup.png" alt="Partner 6"></li>
+        </ul>
+      </section>
+
       <div id="nondisclaimer">
-        <div class="copy">&copy; Great Cliffs Inc.</div>
+        <div class="copy">
+          &copy; Great Cliffs Inc.
+        </div>
+
         <div class="social">
           <a href="#" class="fa fa-facebook"></a>
           <a href="#" class="fa fa-twitter"></a>
           <a href="#" class="fa fa-instagram"></a>
         </div>
       </div>
+
       <div id="disclaimer">
         <p>This is a demo project for bootcamp training purposes only.</p>
       </div>
     </footer>
 
-  </div>
+    <!-- Lightbox HTML -->
+    <div class="backdrop"></div>
+    <div class="box">
+      <div class="close">x</div>
+    </div>
 
-  <script src="js/site_scripts.js"></script>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/digclock.js"></script>
+    <script src="js/site_scripts.js"></script>
+
+  </div>
 
 </body>
 </html>
