@@ -1,98 +1,59 @@
 /* styles.css */
 
-body#home header {
+body#home {
   background-image: url("../images/cliff_ocean.jpg");
   background-size: cover;
   background-position: center;
-  height: 564px;
-  position: relative;
 }
 
-body#activities header {
+body#activities {
   background-image: url("../images/cliff_rock.jpg");
   background-size: cover;
   background-position: center;
-  height: 564px;
-  position: relative;
 }
 
-body#contact header {
+body#contact {
   background-image: url("../images/runfly.jpg");
   background-size: cover;
   background-position: center;
-  height: 564px;
-  position: relative;
 }
 
-body#cliffs header {
+body#cliffs {
   background-image: url("../images/forest_cliff.jpg");
   background-size: cover;
   background-position: center;
+}
+
+header {
   height: 564px;
   position: relative;
 }
 
-.main-header {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+body#home header,
+body#activities header,
+body#contact header,
+body#cliffs header {
+  background-image: none;
+  height: auto;
+  position: static;
 }
 
-.logo img {
-  width: 120px;
+/* Custom Navbar Styling */
+.navbar {
+    background-color: rgba(38, 41, 61, 0.7) !important;
 }
 
-.main-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
 }
 
-.main-menu li {
-  margin-left: 20px;
-  border-left: 1px solid white;
-  padding-left: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  background-color: transparent;
-  flex-grow: 1;
-  text-align: center;
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-item.active .nav-link {
+    color: #9ed034;
 }
 
-.main-menu li:first-child {
-  border-left: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.main-menu a {
-  color: white;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 1em;
-}
-
-.main-menu a:hover {
-  color: #9ed034;
-}
-
-.main-menu .active {
-  font-weight: bold;
-  color: #9ed034;
-  border-bottom: 2px solid #9ed034;
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 main {
@@ -102,33 +63,15 @@ main {
   text-align: center;
 }
 
-.main-content-blocks {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin: 0 auto;
-  max-width: 1000px;
-}
-
-.main-content-block {
-  flex: 1 1 100%;
-  background-color: #f8f8f8;
-  padding: 20px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  text-align: left;
-  color: #333;
-}
-
 section {
   width: 100%;
   background-color: #4288C3;
 }
 
 section #partners {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  list-style: none; /* This will be removed as the HTML for partners is changed to div.row */
+  display: flex; /* This will be removed as the HTML for partners is changed to div.row */
+  flex-wrap: wrap; /* This will be removed as the HTML for partners is changed to div.row */
   justify-content: center;
   padding: 2em 0;
   margin: 0 auto;
@@ -277,7 +220,7 @@ form textarea {
   font-size: 1em;
 }
 
-form .button input {
+form .button input { /* This will be removed as the button is converted to a Bootstrap button */
   font-size: 1.2em;
   width: 8em;
   height: 2.5em;
@@ -286,7 +229,7 @@ form .button input {
   border: none;
 }
 
-form input[type="submit"]:hover {
+form input[type="submit"]:hover { /* This will be removed as the button is converted to a Bootstrap button */
   background-color: #7bad26;
 }
 
@@ -391,7 +334,8 @@ body#cliffs main {
   color: #333;
 }
 
-td.tdhighlight {
+td.tdhighlight,
+td.selected { /* Added td.selected to apply highlighting style */
   background-color: #ffe082;
 }
 
@@ -460,56 +404,10 @@ td.not-available {
   color: #333;
 }
 
+/* Removed redundant media queries for main-header and main-content-blocks as Bootstrap handles these */
 @media (max-width: 992px) {
-  .main-header {
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-    width: 95%;
-    position: relative;
-    bottom: auto;
-    left: auto;
-    right: auto;
-  }
-
-  .main-header .logo {
-    margin-bottom: 10px;
-  }
-
-  .main-menu ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .main-menu li {
-    margin-left: 0;
-    padding-left: 0;
-    border-left: none;
-    border-bottom: 1px solid rgba(202, 204, 202, 0.6);
-    line-height: normal;
-    padding: 10px 0;
-  }
-
-  .main-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .main-content-blocks {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main-content-blocks .main-content-block {
-    flex: 1 1 95%;
-    margin: 10px 0;
-  }
-
   section #partners {
     padding: 1em 0;
-  }
-  .partner {
-    flex: 1 1 calc(50% - 1.5em);
-    max-width: calc(50% - 1.5em);
   }
 }
 
@@ -532,48 +430,49 @@ td.not-available {
     width: 100%;
   }
 
-  .partner {
-    flex: 1 1 calc(50% - 1.5em);
-    max-width: calc(50% - 1.5em);
-  }
-
   main {
     padding: 20px;
   }
 }
 
 @media (max-width: 576px) {
-  .main-content-blocks .main-content-block {
-    flex: 1 1 100%;
-  }
-
-  .partner {
-    flex: 1 1 calc(100% - 1.5em);
-    max-width: calc(100% - 1.5em);
-  }
-
   main {
     padding: 15px;
   }
 }
 
-@media (min-width: 1200px) {
+/* Partner sizing based on homework requirements for different breakpoints */
+@media (max-width: 575px) { /* Extra small: 1 column */
   .partner {
-    flex: 1 1 calc(16.666% - 1.5em);
-    max-width: calc(16.666% - 1.5em);
+    flex: 1 1 calc(100% - 1.5em);
+    max-width: calc(100% - 1.5em);
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 576px) and (max-width: 767px) { /* Small: 2 columns */
   .partner {
+    flex: 1 1 calc(50% - 1.5em);
+    max-width: calc(50% - 1.5em);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { /* Medium: 3 columns */
+  .partner {
+    flex: 1 1 calc(33.333% - 1.5em);
+    max-width: calc(33.333% - 1.5em);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) { /* Large: 4 columns (default for lg is col-3, so 4 cols, this is a bit ambiguous with homework of 6 at large and beyond but I will make it 4 to keep it within this breakpoint) */
+   .partner {
     flex: 1 1 calc(25% - 1.5em);
     max-width: calc(25% - 1.5em);
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 1200px) { /* Extra large and beyond: 6 columns */
   .partner {
-    flex: 1 1 calc(33.333% - 1.5em);
-    max-width: calc(33.333% - 1.5em);
+    flex: 1 1 calc(16.666% - 1.5em);
+    max-width: calc(16.666% - 1.5em);
   }
 }
