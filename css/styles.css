@@ -1,60 +1,105 @@
 /* styles.css */
 
-body#home {
+/* Header Background Images */
+body#home header {
   background-image: url("../images/cliff_ocean.jpg");
   background-size: cover;
   background-position: center;
-}
-
-body#activities {
-  background-image: url("../images/cliff_rock.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-body#contact {
-  background-image: url("../images/runfly.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-body#cliffs {
-  background-image: url("../images/forest_cliff.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-header {
-  height: 564px;
+  /* height: 564px; */ /* Removed fixed height for responsiveness */
   position: relative;
 }
 
-body#home header,
-body#activities header,
-body#contact header,
+body#activities header {
+  background-image: url("../images/cliff_rock.jpg");
+  background-size: cover;
+  background-position: center;
+  /* height: 564px; */ /* Removed fixed height for responsiveness */
+  position: relative;
+}
+
+body#contact header {
+  background-image: url("../images/runfly.jpg");
+  background-size: cover;
+  background-position: center;
+  /* height: 564px; */ /* Removed fixed height for responsiveness */
+  position: relative;
+}
+
 body#cliffs header {
-  background-image: none;
-  height: auto;
-  position: static;
+  background-image: url("../images/forest_cliff.jpg");
+  background-size: cover;
+  background-position: center;
+  /* height: 564px; */ /* Removed fixed height for responsiveness */
+  position: relative;
 }
 
-/* Custom Navbar Styling */
-.navbar {
-    background-color: rgba(38, 41, 61, 0.7) !important;
+/* --- Removed custom header styles as Bootstrap Navbar is used --- */
+/*
+.main-header {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: rgb(255, 255, 255);
+.logo img {
+  width: 120px;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-item.active .nav-link {
-    color: #9ed034;
+.main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.main-menu li {
+  margin-left: 20px;
+  border-left: 1px solid white;
+  padding-left: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: transparent;
+  flex-grow: 1;
+  text-align: center;
 }
+
+.main-menu li:first-child {
+  border-left: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.main-menu a {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+}
+
+.main-menu a:hover {
+  color: #9ed034;
+}
+
+.main-menu .active {
+  font-weight: bold;
+  color: #9ed034;
+  border-bottom: 2px solid #9ed034;
+}
+*/
+/* --- End custom header styles --- */
+
 
 main {
   font-family: Arial, Helvetica, sans-serif;
@@ -63,15 +108,35 @@ main {
   text-align: center;
 }
 
-section {
-  width: 100%;
-  background-color: #4288C3;
+.main-content-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
+.main-content-block {
+  flex: 1 1 100%;
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: left;
+  color: #333;
+}
+
+section {
+  width: 100%;
+  /* background-color: #4288C3; */ /* Handled by Bootstrap class bg-primary */
+}
+
+/* --- Removed custom partners section styles as Bootstrap Grid is used --- */
+/*
 section #partners {
-  list-style: none; /* This will be removed as the HTML for partners is changed to div.row */
-  display: flex; /* This will be removed as the HTML for partners is changed to div.row */
-  flex-wrap: wrap; /* This will be removed as the HTML for partners is changed to div.row */
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 2em 0;
   margin: 0 auto;
@@ -95,6 +160,9 @@ section #partners {
   border-radius: 0;
   margin: 0;
 }
+*/
+/* --- End custom partners section styles --- */
+
 
 footer {
   background-color: #333;
@@ -103,12 +171,12 @@ footer {
   font-family: Arial, sans-serif;
 }
 
-#nondisclaimer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+/* #nondisclaimer { */ /* Bootstrap classes handle this */
+/* display: flex; */
+/* justify-content: space-between; */
+/* align-items: center; */
+/* flex-wrap: wrap; */
+/* } */
 
 #disclaimer {
   margin-top: 10px;
@@ -193,7 +261,8 @@ tbody td:first-child {
   background-color: #d6e9c6;
 }
 
-form {
+/* --- Adjusted form styling for Bootstrap --- */
+/* form {
   width: 70%;
   margin: 20px auto;
   background-color: #4977D1;
@@ -201,14 +270,14 @@ form {
   border-radius: 10px;
   color: white;
   font-family: Arial, sans-serif;
-}
+} */
 
 form label {
   font-weight: bold;
   font-size: 1.1em;
 }
 
-form input[type="text"],
+/* form input[type="text"],
 form input[type="email"],
 form textarea {
   width: 100%;
@@ -218,20 +287,20 @@ form textarea {
   border-radius: 5px;
   resize: vertical;
   font-size: 1em;
-}
+} */
 
-form .button input { /* This will be removed as the button is converted to a Bootstrap button */
-  font-size: 1.2em;
-  width: 8em;
-  height: 2.5em;
+form .button input {
+  /* font-size: 1.2em; */ /* Let Bootstrap handle font size */
+  /* width: 8em; */
+  /* height: 2.5em; */
   font-weight: bold;
-  color: #ffffff;
-  border: none;
+  /* color: #ffffff; */
+  /* border: none; */
 }
 
-form input[type="submit"]:hover { /* This will be removed as the button is converted to a Bootstrap button */
+/* form input[type="submit"]:hover {
   background-color: #7bad26;
-}
+} */
 
 form p,
 form h2 {
@@ -260,10 +329,10 @@ body#cliffs main {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
-.cliff-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+.cliff-grid { /* This class is now on a div.row, but keeping styles for individual items */
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* gap: 30px; */
   width: 90%;
   margin: 30px auto;
 }
@@ -275,6 +344,7 @@ body#cliffs main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   color: #333;
   transition: transform 0.2s;
+  height: 100%; /* Ensure cards are same height in a row */
 }
 
 .cliff-item:hover {
@@ -334,9 +404,16 @@ body#cliffs main {
   color: #333;
 }
 
-td.tdhighlight,
-td.selected { /* Added td.selected to apply highlighting style */
-  background-color: #ffe082;
+td.selectable {
+  cursor: pointer;
+}
+
+td.selectable:hover {
+    background-color: #ffe082; /* tdhighlight equivalent for hover */
+}
+
+td.selected {
+  background-color: #d6e9c6; /* Selected state color */
 }
 
 td.not-available {
@@ -347,6 +424,8 @@ td.not-available {
   cursor: not-allowed;
 }
 
+/* --- Removed displaySelected styling as a Bootstrap Modal is used --- */
+/*
 #activities main #displaySelected {
   visibility: hidden;
   margin: 0 auto;
@@ -403,76 +482,12 @@ td.not-available {
   font-size: 0.95em;
   color: #333;
 }
+*/
+/* --- End displaySelected styling --- */
 
-/* Removed redundant media queries for main-header and main-content-blocks as Bootstrap handles these */
-@media (max-width: 992px) {
-  section #partners {
-    padding: 1em 0;
-  }
-}
-
-@media (max-width: 768px) {
-  footer #nondisclaimer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  footer #nondisclaimer .copy {
-    padding: 1em 0;
-    float: none;
-    width: 100%;
-  }
-
-  footer #nondisclaimer .social {
-    padding: 1em 0;
-    margin: 0;
-    float: none;
-    width: 100%;
-  }
-
-  main {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  main {
-    padding: 15px;
-  }
-}
-
-/* Partner sizing based on homework requirements for different breakpoints */
-@media (max-width: 575px) { /* Extra small: 1 column */
-  .partner {
-    flex: 1 1 calc(100% - 1.5em);
-    max-width: calc(100% - 1.5em);
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767px) { /* Small: 2 columns */
-  .partner {
-    flex: 1 1 calc(50% - 1.5em);
-    max-width: calc(50% - 1.5em);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) { /* Medium: 3 columns */
-  .partner {
-    flex: 1 1 calc(33.333% - 1.5em);
-    max-width: calc(33.333% - 1.5em);
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) { /* Large: 4 columns (default for lg is col-3, so 4 cols, this is a bit ambiguous with homework of 6 at large and beyond but I will make it 4 to keep it within this breakpoint) */
-   .partner {
-    flex: 1 1 calc(25% - 1.5em);
-    max-width: calc(25% - 1.5em);
-  }
-}
-
-@media (min-width: 1200px) { /* Extra large and beyond: 6 columns */
-  .partner {
-    flex: 1 1 calc(16.666% - 1.5em);
-    max-width: calc(16.666% - 1.5em);
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .cliff-item {
+    margin-bottom: 1rem; /* Add space between cards on small screens */
   }
 }

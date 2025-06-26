@@ -1,3 +1,4 @@
+// js/digclock.js
 /*
 DIGITAL CLOCK
 */

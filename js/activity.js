@@ -2,62 +2,70 @@
 
 $(document).ready(function() {
     // 1. Make activity cells selectable, except not-available and header cells
-    // This part ensures that only valid cells can be clicked and processed
     $('table tbody td').each(function() {
         if (!$(this).hasClass('not-available')) {
             $(this).addClass('selectable');
         }
     });
 
-    // 2. Toggle selection on click and handle display box visibility and content
+    // Array to store selected activities
+    var selectedActivities = [];
+
+    // 2. Toggle selection on click and handle modal display
     $('table').on('click', 'td.selectable', function() {
-        // Toggle the 'selected' class for visual feedback
         $(this).toggleClass('selected');
 
-        var activityContent = $(this).text(); // Get the text of the clicked cell
-        var cliffSiteName = ""; // Initialize cliff site name
+        var activityContent = $(this).text();
+        var rowIndex = $(this).closest('tr').index(); // Get row index
+        var activityType = $('table tbody tr').eq(rowIndex).find('td:first').text(); // Get activity type from first column of the row
 
-        // Determine if the clicked cell is in the first column (Activity) or a cliff site column
-        var columnIndex = $(this).index(); // Get the index of the clicked column (0-indexed)
+        var columnIndex = $(this).index();
+        var cliffSiteName = $("thead th").eq(columnIndex).text();
 
-        // If the column index is greater than 0, it means it's a cliff site column
-        if (columnIndex > 0) {
-            // Get the text from the corresponding <th> in the table header (cliff site name)
-            // .eq(columnIndex) selects the header cell at the same column index
-            cliffSiteName = $("thead th").eq(columnIndex).text();
-        }
-
-        // Prepare the display text for the list
-        var displayItemText = activityContent;
-        if (cliffSiteName && cliffSiteName !== "Activity") { // Ensure cliffSiteName is not empty and not the "Activity" header
-            displayItemText = activityContent + " at " + cliffSiteName;
-        }
-
-        // Get the result display area
-        var $resultDiv = $('#result');
-        var $displaySelectedBox = $('#displaySelected');
+        var displayItemText = activityType + " at " + cliffSiteName;
 
         if ($(this).hasClass("selected")) {
-            // Cell was just selected
-            $displaySelectedBox.css("visibility", "visible"); // Make display box visible
-            $displaySelectedBox.css("margin-top", "2em"); // Add space above display box
-
-            // Append the selected activity with its cliff site to the results
-            $resultDiv.append("<p>" + displayItemText + "</p>");
-
+            // Add to selected activities
+            selectedActivities.push(displayItemText);
         } else {
-            // Cell was just deselected
+            // Remove from selected activities
+            selectedActivities = $.grep(selectedActivities, function(value) {
+                return value !== displayItemText;
+            });
+        }
 
-            // Remove the corresponding paragraph from the results
-            // We use :contains() to find the paragraph with the exact text that was added
-            $resultDiv.find('p:contains("' + displayItemText + '")').remove();
+        // Update modal content
+        var $modalActivitiesList = $('#modalActivitiesList');
+        $modalActivitiesList.empty(); // Clear previous list
 
-            // Check if there are any activities left in the list
-            if ($resultDiv.has('p').length === 0) {
-                // No activities left, hide the display box
-                $displaySelectedBox.css("visibility", "hidden");
-                $displaySelectedBox.css("margin-top", "0");
-            }
+        if (selectedActivities.length > 0) {
+            $.each(selectedActivities, function(index, item) {
+                $modalActivitiesList.append("<p>" + item + "</p>");
+            });
+            // Show the modal if activities are selected
+            $('#selectedActivitiesModal').modal('show');
+        } else {
+            // Hide the modal if no activities are selected
+            $('#selectedActivitiesModal').modal('hide');
+        }
+    });
+
+    // Optional: Handle "Get Info" button click in modal
+    $('#modalGetInfoBtn').on('click', function() {
+        var email = $('#modalEmailInput').val();
+        if (email) {
+            alert("Information for: " + selectedActivities.join(", ") + " will be sent to " + email);
+            // Here you would typically send the data via AJAX or a form submission
+            $('#selectedActivitiesModal').modal('hide'); // Hide modal after "getting info"
+        } else {
+            alert("Please enter your email address.");
+        }
+    });
+
+    // Optional: Clear selections when modal is hidden (e.g., by close button or clicking outside)
+    $('#selectedActivitiesModal').on('hidden.bs.modal', function (e) {
+        if (selectedActivities.length === 0) { // Only clear selected visual if modal was empty before hiding
+             $('table td.selected').removeClass('selected');
         }
     });
 });

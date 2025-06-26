@@ -1,21 +1,7 @@
+// js/site_scripts.js
 /*-
-PARTNERS
+PARTNERS - REMOVED AUTO SCROLLING AS PER REQUIREMENTS FOR RESPONSIVE GRID
 */
-
-const partners = document.getElementById('partners');
-if (partners) { // Check if partners element exists before trying to access it
-  let scrollAmount = 0;
-  setInterval(() => {
-    scrollAmount += 1;
-    if (scrollAmount >= partners.scrollWidth - partners.clientWidth) {
-      scrollAmount = 0;
-    }
-    partners.scrollTo({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
-  }, 50);
-}
 
 
 /*-
@@ -30,11 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
     howContactSelect.addEventListener('change', function() {
       const selectedValue = this.value;
 
-      // Hide all divs first
       emailDiv.style.display = 'none';
       phoneDiv.style.display = 'none';
 
-      // Show the relevant div based on selection
       if (selectedValue === 'email') {
         emailDiv.style.display = 'block';
       } else if (selectedValue === 'phone') {

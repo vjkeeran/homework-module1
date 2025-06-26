@@ -1,124 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>California's Greatest Cliffs</title>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>California's Greatest Cliffs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body id="cliffs" class="pt-5">
+<body id="cliffs">
 
-  <div class="container">
+  <div class="container-fluid">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" alt="Great Cliff's Logo" width="125">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="cliffs.html">Cliffs <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="activities.html">Activities</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="Great Cliff's Logo" width="125">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="cliffs.html">Cliffs <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="activities.html">Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    <header></header>     <main>
-      <section class="intro">
-        <h2>California's Greatest Cliffs</h2>
-        <p>
-          The greatest cliffs are these four cliffs located in southern California. Each of these cliffs have their own uniqueness and beauty: West Cliff, North Cliff, East Cliff and South Cliff are the pride of California. Each cliff has many attractions to offer visitors such as recreational caves, camping sites, wildlife watch spots and overnight cabins.
-        </p>
-        <p>
-          No matter which direction you head from Irvine, California, the sites are easily reached within a 100 mile radius. West Cliff is the most popular among Westcliff University campus students because of its close proximity.
-        </p>
-      </section>
+    <main class="py-4">
+      <div class="container">
+        <section class="intro">
+          <h2 class="text-center">California's Greatest Cliffs</h2>
+          <p>
+            The greatest cliffs are these four cliffs located in southern California. Each of these cliffs have their own uniqueness and beauty: West Cliff, North Cliff, East Cliff and South Cliff are the pride of California. Each cliff has many attractions to offer visitors such as recreational caves, camping sites, wildlife watch spots and overnight cabins.
+          </p>
+          <p>
+            No matter which direction you head from Irvine, California, the sites are easily reached within a 100 mile radius. West Cliff is the most popular among Westcliff University campus students because of its close proximity.
+          </p>
+        </section>
 
-      <section class="cliff-grid">
-        <div class="cliff-item">
-          <a href="#/" class="lightbox-toggle">
-            <img src="images/cliff-west-sea.jpg" alt="West Cliff">
-          </a>
-          <h3>West Cliff</h3>
-        </div>
-        <div class="cliff-item">
-          <a href="#/" class="lightbox-toggle">
-            <img src="images/cliff-north-mountain.jpg" alt="North Cliff">
-          </a>
-          <h3>North Cliff</h3>
-        </div>
-        <div class="cliff-item">
-          <a href="#/" class="lightbox-toggle">
-            <img src="images/cliff-east-river.jpg" alt="East Cliff">
-          </a>
-          <h3>East Cliff</h3>
-        </div>
-        <div class="cliff-item">
-          <a href="#/" class="lightbox-toggle">
-            <img src="images/cliff-south-canyon.jpg" alt="South Cliff">
-          </a>
-          <h3>South Cliff</h3>
-        </div>
-      </section>
-    </main>
+        <section class="py-4">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="cliff-item card">
+                <a href="#/" class="lightbox-toggle">
+                  <img src="images/cliff-west-sea.jpg" alt="West Cliff" class="img-fluid card-img-top">
+                </a>
+                <div class="card-body p-0">
+                  <h3 class="card-title mb-0">West Cliff</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="cliff-item card">
+                <a href="#/" class="lightbox-toggle">
+                  <img src="images/cliff-north-mountain.jpg" alt="North Cliff" class="img-fluid card-img-top">
+                </a>
+                <div class="card-body p-0">
+                  <h3 class="card-title mb-0">North Cliff</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="cliff-item card">
+                <a href="#/" class="lightbox-toggle">
+                  <img src="images/cliff-east-river.jpg" alt="East Cliff" class="img-fluid card-img-top">
+                </a>
+                <div class="card-body p-0">
+                  <h3 class="card-title mb-0">East Cliff</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+              <div class="cliff-item card">
+                <a href="#/" class="lightbox-toggle">
+                  <img src="images/cliff-south-canyon.jpg" alt="South Cliff" class="img-fluid card-img-top">
+                </a>
+                <div class="card-body p-0">
+                  <h3 class="card-title mb-0">South Cliff</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
 
-        <footer>
-      <section>
-        <div class="row justify-content-center" id="partners">
-          <div class="col-6 col-sm-6 col-md-4 col-lg-2 partner mb-3"><img src="images/partners/partner-bustour.png" alt="Partner 1"></div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-2 partner mb-3"><img src="images/partners/partner-cabinrental.png" alt="Partner 2"></div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-2 partner mb-3"><img src="images/partners/partner-campingadv.png" alt="Partner 3"></div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-2 partner mb-3"><img src="images/partners/partner-collegetours.png" alt="Partner 4"></div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-2 partner mb-3"><img src="images/partners/partner-rentalbike.png" alt="Partner 5"></div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-2 partner mb-3"><img src="images/partners/partner-tourgroup.png" alt="Partner 6"></div>
-        </div>
-      </section>
+    <footer>
+      <section class="py-4 bg-primary text-white">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 d-flex justify-content-center align-items-center bg-white rounded-circle p-3">
+              <img src="images/partners/partner-bustour.png" alt="Partner 1" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 d-flex justify-content-center align-items-center bg-white rounded-circle p-3">
+              <img src="images/partners/partner-cabinrental.png" alt="Partner 2" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 d-flex justify-content-center align-items-center bg-white rounded-circle p-3">
+              <img src="images/partners/partner-campingadv.png" alt="Partner 3" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 d-flex justify-content-center align-items-center bg-white rounded-circle p-3">
+              <img src="images/partners/partner-collegetours.png" alt="Partner 4" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 d-flex justify-content-center align-items-center bg-white rounded-circle p-3">
+              <img src="images/partners/partner-rentalbike.png" alt="Partner 5" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 d-flex justify-content-center align-items-center bg-white rounded-circle p-3">
+              <img src="images/partners/partner-tourgroup.png" alt="Partner 6" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div id="nondisclaimer">
-        <div class="copy">
-          &copy; Great Cliffs Inc.
-        </div>
+      <div id="nondisclaimer" class="d-flex justify-content-between align-items-center py-3">
+        <div class="copy text-muted">
+          &copy; Great Cliffs Inc.
+        </div>
+        <div class="social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+      </div>
 
-        <div class="social">
-          <a href="#" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-twitter"></a>
-          <a href="#" class="fa fa-instagram"></a>
-        </div>
-      </div>
+      <div id="disclaimer" class="text-center py-2">
+        <p class="small text-muted">This is a demo project for bootcamp training purposes only.</p>
+      </div>
+    </footer>
 
-      <div id="disclaimer">
-        <p>This is a demo project for bootcamp training purposes only.</p>
-      </div>
-    </footer>
+    <div class="backdrop"></div>
+    <div class="box">
+      <div class="close">x</div>
+    </div>
 
-        <div class="backdrop"></div>
-    <div class="box">
-      <div class="close">x</div>
-    </div>
+  </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/demo.js"></script>
-    <script src="js/digclock.js"></script>
-    <script src="js/site_scripts.js"></script>
-
-  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/digclock.js"></script>
+  <script src="js/site_scripts.js"></script>
 
 </body>
 </html>
