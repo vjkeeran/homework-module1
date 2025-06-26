@@ -407,3 +407,17 @@ body#cliffs main {
   cursor: pointer;
   color: #333;
 }
+
+td.selectable {
+  cursor: pointer;
+}
+td.selected {
+  background-color: #ffe082;
+}
+td.not-available {
+  background: #eee;
+  color: #aaa;
+  text-align: center;
+  font-style: italic;
+  cursor: not-allowed;
+}
